@@ -94,15 +94,15 @@ $windowsFeaturesList = @("MSMQ-Server",
     "WAS-Config-APIs",
     "Desktop-Experience")
 
-Write-Host "Starting setup…" -Foregroundcolor Yellow
+Write-Host "Starting setupâ€¦" -Foregroundcolor Yellow
 
 #Verify existence of Windows Roles.
-Write-Host "Checking for existance of required Windows roles…" -Foregroundcolor Yellow
+Write-Host "Checking for existance of required Windows rolesâ€¦" -Foregroundcolor Yellow
 Get-WindowsFeature $windowsRolesList
 Write-Host "All required roles were found and can be enabled." -Foregroundcolor Green
 
 #Install Windows Roles.
-Write-Host "Installing roles…" -Foregroundcolor Yellow
+Write-Host "Installing rolesâ€¦" -Foregroundcolor Yellow
 Add-WindowsFeature $windowsRolesList
 Write-Host "Features installed." -Foregroundcolor Green
 
@@ -120,17 +120,17 @@ if (!(Test-Path $aspnetRegIISFullName))
 }
 
 #Verify existence of Windows Features.
-Write-Host "Checking for existance of required Windows features…" -Foregroundcolor Yellow
+Write-Host "Checking for existance of required Windows featuresâ€¦" -Foregroundcolor Yellow
 Get-WindowsFeature $windowsFeaturesList
 Write-Host "All required features were found and can be enabled." -Foregroundcolor Green
      	 
 #Install windows features.
-Write-Host "Installing features…" -Foregroundcolor Yellow
+Write-Host "Installing featuresâ€¦" -Foregroundcolor Yellow
 Add-WindowsFeature $windowsFeaturesList
 Write-Host "Features installed." -Foregroundcolor Green   
 
 #Register ASP.NET 4.0 with IIS     
-Write-Host "Registering ASP.NET 4.0 with IIS…" -Foregroundcolor Yellow
+Write-Host "Registering ASP.NET 4.0 with IISâ€¦" -Foregroundcolor Yellow
 Start-Process -filepath $aspnetRegIISFullName  -ArgumentList "-iru"               
 Write-Host "Setup complete." -Foregroundcolor Green
 # SIG # Begin signature block
@@ -261,3 +261,4 @@ Write-Host "Setup complete." -Foregroundcolor Green
 # m0G2XqykQu0y+SsIMBV79gbd414AS218WsagdYjrmBDfGRhRZk3CCvfzP7qkiCw9
 # YmKbLUud0W23oEyhxHySHTkDBQy/OniOJOCAq4gqmRsPe7rpn5Be
 # SIG # End signature block
+1
